@@ -278,6 +278,7 @@ export
     isapprox,
     iseven,
     isfinite,
+    isidentifier,
     isinf,
     isinteger,
     isnan,

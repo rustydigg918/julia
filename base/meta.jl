@@ -9,8 +9,15 @@ using ..CoreLogging
 
 export quot,
        isexpr,
+       isidentifier,
+       isoperator,
+       isunaryoperator,
+       isbinaryoperator,
+       ispostfixoperator,
        show_sexpr,
        @dump
+
+using Base: isidentifier, isoperator, isunaryoperator, isbinaryoperator, ispostfixoperator
 
 """
     Meta.quot(ex)::Expr
