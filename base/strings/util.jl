@@ -712,8 +712,8 @@ julia> ascii("abcdefgh")
 """
 ascii(x::AbstractString) = ascii(String(x))
 
-Base.rest(s::Union{String,SubString{String}}, i=1) = SubString(s, i)
-function Base.rest(s::AbstractString, st...)
+rest(s::Union{String,SubString{String}}, i=1) = SubString(s, i)
+function rest(s::AbstractString, st...)
     io = IOBuffer(; maxsize=ncodeunits(s))
     for c in Iterators.rest(s, st...)
         print(io, c)
